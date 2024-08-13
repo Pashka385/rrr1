@@ -1,0 +1,220 @@
+header{
+    width: 100%;
+    height: 85px;
+    display: flex;
+    background-color: #fff;
+}
+
+.container{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.burger__container{
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(55, 177, 196, 0.974);
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 100;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    text-align: left;
+}
+.burger__container ul {
+    list-style-type: none;
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    text-align: left;
+}
+.burger__container ul button{
+    width: 120px;
+    height: 45px;
+    background-color: transparent;
+    border: solid 1px #3A85F4;
+    color: #3A85F4;
+    border-radius: 20px;
+    font-size: 20px;
+}
+.burger {
+    display: none;
+}
+.burger span {
+    width: 80%;
+    height: 4px;
+    background-color: #000;
+    border-radius: 2px;
+    transition: transform 0.3s ease;
+}
+.burger span:nth-child(3){
+    width: 60%;
+}
+
+.burger:hover span {
+    background-color: #333;
+}
+
+.nav{
+    display: flex;
+    gap: 20px;
+}
+.nav img{
+    width: 129px;
+    height: 47px;
+}
+.nav ul{
+    display: flex;
+    align-items: center;
+    text-align: center;
+    text-decoration: none;
+    list-style-type: none;
+    gap: 30px;
+    color: #575756;
+}
+.feedback{
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+.feedback button{
+    width: 195px;
+    height: 36px;
+    border-radius: 123px;
+    background-color: transparent;
+    border: solid 1px #3A85F4;
+    color: #3A85F4;
+    font-size: 16px;
+}
+.icons{
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+.icons img:nth-child(1){
+    width: 40px;
+    height: 29px;
+}
+.icons img:nth-child(2){
+    width: 28px;
+    height: 29px;
+}
+.icons img:nth-child(3){
+    width: 51px;
+    height: 46px;
+}
+@media screen and (max-width:1000px) {
+    .nav img{
+        width: 110px;
+        height: 40px;
+    }
+    .nav ul{
+        gap: 15px;
+        color: #575756;
+        font-size: 14px;
+    }
+    .feedback{
+        gap: 20px;
+    }
+    .feedback button{
+        width: 175px;
+        height: 35px;
+        font-size: 16px;
+    }
+    .icons{
+        display: flex;
+        align-items: center;
+        gap: 20px;
+    }
+    .icons img:nth-child(1){
+        width: 35px;
+        height: 25px;
+    }
+    .icons img:nth-child(2){
+        width: 23px;
+        height: 24px;
+    }
+    .icons img:nth-child(3){
+        width: 45px;    
+        height: 41px;
+}}
+
+@media screen and (max-width:800px) {
+    .container{
+        display: flex;
+        justify-content: space-between;
+        padding: 0px 20px 0px 20px;
+    }
+    .nav ul{
+        display: none;
+    }
+    .icons img:nth-child(3){
+        display: none;
+    }
+    .burger{
+        width: 60px;
+        height: 40px;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        justify-content: center;
+        gap: 6px;
+        cursor: pointer; 
+    }
+    .burger span {
+        width: 70%;
+        height: 2.5px;
+        background-color: #000;
+        border-radius: 2px;
+        transition: transform 0.3s ease;
+    }
+    .burger span:nth-child(3){
+        width: 50%;
+    }
+}
+@media (max-width: 520px) {
+    .feedback button {
+        font-size: 16px;
+        content: "+заявка";
+        text-transform: uppercase;
+    }
+    .feedback button::before {
+        content: "+ заявка";
+        font-size: 10px;;
+    }
+    .feedback button {
+        font-size: 0; /* Скрываем оригинальный текст */
+        width: 89.07px;
+        height: 26px;
+        border-radius: 123px;
+        padding: 10px; /* Добавляем отступы */
+        white-space: nowrap;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .feedback button::before {
+        font-size: 12px; /* Скрываем оригинальный текст и показываем новый */
+    }
+    .icons img:nth-child(1){
+        display: none;
+    }
+    .icons img:nth-child(2){
+        display: none;
+    }
+    .burger{
+        width: 50px;
+        height: 30px;}
+    .feedback{
+        gap:10px ;
+    }
+}

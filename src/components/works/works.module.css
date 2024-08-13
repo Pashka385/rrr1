@@ -1,0 +1,272 @@
+.works {
+    min-width: 100%;
+    min-height: 317px;
+    display: flex;
+    justify-content: center;
+}
+
+.container {
+    width: 1050px;
+    min-height: 317px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.title {
+    width: 100%;
+    padding-top: 50px;
+    min-height: 30px;
+    text-align: center;
+    padding-bottom: 20px;
+    font-size: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.box {
+    width: 100%;
+    min-height: 291px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #fff;
+    position: relative;
+    padding: 30px 60px; /* Padding to the sides */
+    flex-wrap: wrap; /* Allow wrapping of items */
+    gap: 30px; /* Space between items */
+}
+
+.item {
+    background-color: #fff;
+    width: 179px;
+    height: 179px; /* Fixed height */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 14px;
+    box-shadow: 0px 0px 20px 20px #d4ebffb5;
+    flex-shrink: 0;
+}
+
+.itemWrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative; /* Needed for positioning the pseudo-element */
+    height: 250px; /* Set a fixed height that accommodates both the image and text */
+    justify-content: center;
+    padding-top: 30px;
+    gap: 10px;
+}
+
+.itemWrapper::after {
+    content: '';
+    position: absolute;
+    right: -45px; /* Adjust this value to position the SVG arrow between the items */
+    top: 50%;
+    transform: translateY(-50%); /* Center the arrow vertically */
+    width: 21px; /* Width of the SVG */
+    height: 7px; /* Height of the SVG */
+    background-image: url('data:image/svg+xml;utf8,<svg width="21" height="7" viewBox="0 0 21 7" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M18.4467 4.2L16.7267 6.013L17.6667 7L21 3.5L17.6667 0L16.7267 0.987L18.4467 2.8H0V4.2H18.4467Z" fill="%235A5A5A"/></svg>');
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.itemWrapper:last-child::after {
+    display: none; /* Hide the arrow for the last item */
+}
+
+#work-step-1 img {
+    width: 117px;
+    height: 110px;
+}
+
+#work-step-2 img {
+    width: 128px;
+    height: 121px;
+}
+
+#work-step-3 img {
+    width: 120px;
+    height: 122px;
+}
+
+#work-step-4 img {
+    width: 112px;
+    height: 102px;
+}
+
+.text {
+    margin-top: 10px;
+    text-align: center;
+    font-size: 14px;
+    color: #2F2F2F;
+    max-width: 179px;
+    overflow: hidden; /* Prevent text overflow from affecting layout */
+    text-overflow: ellipsis; /* Truncate text with ellipsis if too long */
+    white-space: nowrap; /* Keep text in a single line */
+}
+@media screen and (max-width:1060px) {
+    .item{
+        width: 139px;
+        height: 139px;
+    }
+    .box{
+        display: flex;
+        justify-content: space-around;
+        padding: 0;
+    }
+    .item img{
+        width: 90px;
+        height: 90px;
+    }
+}
+@media screen and (max-width:1000px) {
+    .itemWrapper::after {
+        content: '';
+        position: absolute;
+        right: -35px; /* Adjust this value to position the SVG arrow between the items */
+        transform: translateY(-50%); /* Center the arrow vertically */
+    }
+}
+@media screen and (max-width:868px) {
+    .itemWrapper::after {
+        content: '';
+        position: absolute;
+        right: -30px; /* Adjust this value to position the SVG arrow between the items */
+    }
+}
+@media screen and (max-width:822px) {
+    .itemWrapper::after {
+        content: '';
+        position: absolute;
+        right: -20px; /* Adjust this value to position the SVG arrow between the items */
+    }
+    .box{
+        flex-wrap: nowrap;
+    }
+}
+@media screen and (max-width:780px) {
+    .item {
+        width: 119px;
+        height: 119px;
+    }
+    .item img{
+        width: 70px;
+        height: 70px;
+    }
+}
+@media screen and (max-width:750px) {
+    .box{
+        flex-wrap: nowrap;
+    }
+    .itemWrapper::after {
+        content: '';
+        position: absolute;
+        right: -20px; /* Adjust this value to position the SVG arrow between the items */
+    }
+    .text {
+        font-size: 12px;
+        white-space: normal; /* Allow the text to wrap onto multiple lines */
+        overflow: visible; /* Ensure the text is visible when it wraps */
+        text-overflow: initial; /* Disable ellipsis truncation */
+    }
+}
+@media screen and (max-width:690px) {
+    .itemWrapper::after {
+        content: '';
+        position: absolute;
+        right: -20px; /* Adjust this value to position the SVG arrow between the items */
+    }
+    .box {
+        justify-content: center;
+        gap: 20px; /* Adjust the gap between items */
+        padding: 20px; /* Adjust padding to fit the layout */
+        flex-wrap: nowrap;
+    }
+}
+/* Media query for screens 670px or smaller */
+@media screen and (max-width: 670px) {
+    .box {
+        justify-content: center;
+        gap: 10px; /* Adjust the gap between items */
+        padding: 0px; /* Adjust padding to fit the layout */
+        flex-wrap: wrap;
+    }
+
+    .itemWrapper {
+        width: calc(50% - 20px); /* Each item takes up 50% of the width minus the gap */
+        height: auto; /* Let the height be flexible */
+    }
+
+    .itemWrapper::after {
+        content: '';
+        display: none;
+    }
+    .item {
+        width: 139px;
+        height: 139px;
+        position: relative;
+        z-index: 10; /* Ensure the item itself is below its pseudo-element */
+    }
+    .item img {
+        width: 80px; /* Adjust image size */
+        height: 80px;
+    }
+    .text {
+        font-size: 12px; /* Adjust font size for smaller screens */
+        white-space: normal; /* Allow text to wrap */
+    }
+}
+@media screen and (max-width: 450px) {
+    .item {
+        width: 100px;
+        height: 100px;
+        position: relative;
+        z-index: 10; /* Ensure the item itself is below its pseudo-element */
+    }
+
+    .item img {
+        width: 60px; /* Adjust image size */
+        height: 60px;
+    }
+
+    .item::after {
+        content: '';
+        position: absolute;
+        left:0px; /* Position the image to the center of the item */
+        top: -30px; /* Position the image below the item */
+        transform: translate(-50%, 10px); /* Center the image and move it down slightly */
+        width: 50px; /* Adjust the size of the pseudo-element */
+        height: 50px;
+        background-repeat: no-repeat;
+        background-size: contain; /* Ensure the image scales correctly */
+        background-position: center;
+        z-index: -1; /* Ensure the image appears below the item itself */
+    }
+
+    .first::after {
+        background-image: url('./1num.png'); /* Path to the image */
+    }
+
+    .second::after {
+        background-image: url('./2num.png'); /* Path to the image */
+    }
+
+    .three::after {
+        background-image: url('./3num.png'); /* Path to the image */
+    }
+
+    .fourth::after {
+        background-image: url('./4num.png'); /* Path to the image */
+    }
+    .text {
+        display: -webkit-box; /* Use the flexbox model */
+        -webkit-line-clamp: 3; /* Limit the number of lines */
+        -webkit-box-orient: vertical; /* Set the box orientation to vertical */
+        overflow: hidden; /* Hide any overflowed text */
+        text-overflow: ellipsis; /* Add ellipsis (...) for overflowed text */
+    }
+}

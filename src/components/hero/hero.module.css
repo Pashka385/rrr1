@@ -1,0 +1,244 @@
+.container{
+    width: 100%;
+    min-height: 518px;
+    display: flex;
+    justify-content: center;
+    background-color: #CCE7FF;
+}
+.text{
+    width: 40%;
+    min-height: 518px;
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    justify-content: center;
+    gap: 20px;
+}
+.text button{
+    width: 255px;
+    height: 42px;
+    border-radius: 123px;
+    background-color: #3A85F4;
+    color: #fff;
+    text-transform: uppercase;
+    border: solid 0px transparent;
+}
+.text h1{
+    width: 75%;
+}
+.text p{
+    width: 95%;
+}
+.img{
+    width: 40%;
+    min-height: 518px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+@media screen and (max-width:990px) {
+    .text{
+        width: 40%;
+        min-height: 518px;
+    }
+    .text button{
+        width: 255px;
+        height: 43px;
+    }
+    .text h1{
+        width: 75%;
+    }
+    .text p{
+        width: 95%;
+    }
+    .img img{
+        padding-left: 10px;
+        width: 470px;
+        height: 330px;
+    }
+}
+@media screen and (max-width:900px) {
+    .text{
+        width: 53%;
+    }
+    .img img{
+        width: 350px;
+        height: 280px;
+        padding-bottom: 40px;
+    }
+    .img{
+        display: flex;
+        min-width: 47%;
+    }
+    .container{
+        padding: 0px 20px;
+    }
+    .text h1{
+        width: 100%;
+        padding-right: 30px;
+    }
+    .text p {
+        width: 90%;
+        font-size: 16px;
+        content: "Аналитика, соавторство, рецензирование и продвижение научных работ.";
+    }
+    .text p::before {
+        content: "Аналитика, соавторство, рецензирование и продвижение научных работ.";
+        font-size: 14px;;
+    }
+    .text p{
+        font-size: 0; /* Скрываем оригинальный текст */
+    }
+    .text p::before {
+        font-size: 13px; /* Скрываем оригинальный текст и показываем новый */
+    }
+}
+@media screen and (max-width:700px) {
+    .img{
+        width: 65%;
+    }
+}
+@media screen and (max-width:650px) {
+    .text button{
+        width: 160px;
+        height: 34px;
+        border-radius: 123px;
+        background-color: #3A85F4;
+        color: #fff;
+        text-transform: uppercase;
+        border: solid 0px transparent;
+    }
+    .text button {
+        width: 90%;
+        font-size: 16px;
+        content: "ПРИСОЕДИНИТЬСЯ";
+    }
+    .text button::before {
+        content: "ПРИСОЕДИНИТЬСЯ";
+        font-size: 14px;;
+    }
+    .text button{
+        font-size: 0; /* Скрываем оригинальный текст */
+    }
+    .text button::before {
+        font-size: 14px; /* Скрываем оригинальный текст и показываем новый */
+    }
+    .container{
+        padding: 20px;
+    }
+    .text h1{
+        width: 100%;
+        font-size: 30px;
+    }
+    .text p{
+        width: 85%;
+    }
+    .img{
+        max-width: 100%;
+    }
+    .img img{
+        width: 100%;
+        padding-left: 0;
+    }
+}
+@media screen and (max-width:600px) {
+    .container{
+        min-height: 318px;
+        padding: 0px 30px;
+        gap: 20px;
+    }
+    .img{
+        width: 340px;
+    }
+    .text{
+        min-height: 318px;  
+    }
+    .img img{
+        width: 400px;
+        height: 250px;
+    }
+}
+@media screen and (max-width:500px) {
+    .img{
+        width: 100%;
+        padding-right: 50px;
+    }
+    .img img{
+        min-width:300px;
+        height: 230px;
+    }
+    .text h1{
+        font-size: 25px;
+    }
+}
+@media screen and (max-width:450px) {
+    .container{
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+    .text{
+        padding-top: 30px;
+        width: 100%;
+        min-height: 200px;
+    }
+    .text button{
+        width: 160px;
+        height: 34px;
+    }
+    .text h1{
+        width: 80%;
+    }
+    .img{
+        min-width: 100px;
+        display: flex;
+        min-height: 100px;
+        align-items: flex-start;
+        justify-content: flex-end;
+        padding: 0;
+    }
+    .img img{
+        width: 100px;
+        height: 220px;
+    }
+}
+@media screen and (max-width:356px) {
+    .img{
+        width: 100%;
+        min-height: 100px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 0;
+        gap: 0px;
+        margin: 0px;
+    }
+    .img img{
+        width: 350px;
+        padding: 10px;
+    }
+    .text button{
+        width: 160px;
+        height: 34px;
+        border-radius: 123px;
+        background-color: #3A85F4;
+        color: #fff;
+        text-transform: uppercase;
+        border: solid 0px transparent;
+    }
+    .text button {
+        width: 90%;
+        font-size: 16px;
+        content: "СОЗДАТЬ ЗАЯВКУ";
+    }
+    .text button::before {
+        content: "СОЗДАТЬ ЗАЯВКУ";
+        font-size: 14px;;
+    }
+    .text button{
+        font-size: 0; /* Скрываем оригинальный текст */
+    }
+    .text button::before {
+        font-size: 14px; /* Скрываем оригинальный текст и показываем новый */
+    }
+}
