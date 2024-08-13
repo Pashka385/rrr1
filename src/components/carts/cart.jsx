@@ -56,7 +56,7 @@ export default function Carts() {
                                     <p>{item.key__btn2}</p>
                                 </button>
                                 <button className={styles.key__btn}>
-                                    <img src={vector1} alt="-" />
+                                    <img src={vector1}/>
                                     <p>{item.key__btn3}</p>
                                 </button>
                             </div>
