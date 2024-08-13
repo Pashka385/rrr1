@@ -18,7 +18,6 @@
     "eject": "react-scripts eject",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build"
-
   },
   "eslintConfig": {
     "extends": [
@@ -41,6 +40,5 @@
   "devDependencies": {
     "gh-pages": "^6.1.1"
   },
-  "homepage": "https://Pashka385.github.io/test"
-
+  "homepage": "https://Pashka385.github.io/test1"
 }
